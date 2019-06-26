@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html lang="ko">
- <head>
-   <meta charset="UTF-8">
-	 <meta http-equiv="X-UA-Compatible"  content="IE=edge, chrome=1">
-     <meta name="viewport" content="width=device-width" >
-    <title>도서출판 독식가</title>
-<!--[if lte IE 8]>>
-<script type="text/javascript" src="./respond.min.js"></script>
-<![endif]-->
-	<link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="js/jquery-1.8.3.min.js"></script>
-	<script src="js/swiper.min.js"></script>
-	<script src="js/jquery-1.7.2.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="swiper.min.css" />
-	<script src="js/functions.js"></script>
-    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<link href="jquery-backToTop.min.css" rel="stylesheet" type="text/css">
+
+<head>
+ <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+<script type="text/javascript">   
+$(document).ready( function() { 
+
+$("#headers").load("inc_header.html");  // 원하는 파일 경로를 삽입하면 된다
+$("#footers").load("inc_footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+
+}); 
+</script>
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta name="description" content="Image Wall with jQuery and CSS3" />
         <meta name="keywords" content="jquery, css3, images, wall, thumbnails, slide, animate"/>
 		<meta name="author" content="Codrops" />
@@ -49,165 +43,9 @@
 		<link rel="stylesheet" type="text/css" href="demo.css" />
 		<link rel="stylesheet" type="text/css" href="bookblock.css" />
 		<link rel="stylesheet" type="text/css" href="component.css" />
-		<script src="js/modernizr.custom.js"></script>
-    <style>
-body.scroll {min-height:30vh;}
-</style>	        
-        </head>
-        
-        <body>
-        <body class="scroll">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-<script src="js/jquery-backToTop.js"></script>
-<script>
-var $button = $.backToTop({theme: 'fawesome'});
-</script>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</body>
-    <div id="wrap">  
-     <header>
-        <div id="logo"><a href="index.html"><img src="images/logo.jpg"  alt="도서출판 독식가" /></a></div>
-        <div id="sns">
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/face.jpg"></a>
-             <a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0" target="_blank"><img src="images/blog.jpg"></a>
-              <a href="https://www.instagram.com/" target="_blank"><img src="images/instar.jpg"></a>
-        </div>
-        
-        <div id="global">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="login.html">login</a></li>
-			    <li><a href="http://silverbeauty.kr/" target="_blank">portfolio</a></li>
-			</ul>
-				</div>
-		 
-		 
-        <div class="clear"></div>
-   
-		  <!-- jQuery lib from google server ===================== -->
-	<script src="js/jquery-1.7.2.min.js"></script>
-<!--  javaScript -->
-<script>  
-<!--  // building select nav for mobile width only -->
-$(function(){
-	// building select menu
-	$('<select />').appendTo('nav');
-
-	// building an option for select menu
-	$('<option />', {
-		'selected': 'selected',
-		'value' : '',
-		'text': 'Choise Page...'
-	}).appendTo('nav select');
-
-	$('nav ul li a').each(function(){
-		var target = $(this);
-
-		$('<option />', {
-			'value' : target.attr('href'),
-			'text': target.text()
-		}).appendTo('nav select');
-
-	});
-
-	// on clicking on link
-	$('nav select').on('change',function(){
-		window.location = $(this).find('option:selected').val();
-	});
-});
-
-// show and hide sub menu
-$(function(){
-	$('nav ul li').hover(
-		function () {
-			//show its submenu
-			$('ul', this).slideDown(150);
-		}, 
-		function () {
-			//hide its submenu
-			$('ul', this).slideUp(150);			
-		}
-	);
-});
-//end
-</script>
-<!-- end -->
-
-		 <div id="fdw">
-				<!--nav-->
-					<nav>
-						<ul>
-							<li class="current">
-								<a href="index.html">Home<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="company_01.html">독식가 소개</a></li>
-									<li><a href="company_02.html">오시는 길</a></li>
-								</ul>
-							</li>
-
-							<li><a href="magazine_01.html">출간도서</a></li>
-							
-							<li>
-								<a href="e-book_01.html">e-book 전자책<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="e-book_02.html">e-book이란?</a></li>
-									<li><a href="e-book_01.html">e-book 출간도서</a></li>
-									
-								</ul>
-							</li>
-								
-							<li>
-								<a href="book_infor_01.html">도서출판·유통<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="book_infor_01.html">출판정보</a></li>
-									<li><a href="book_infor_02.html">출판비용안내</a></li>
-									<li><a href="book_infor_03.html">도서유통안내</a></li>
-								</ul>
-							</li>
-							
-							<li>
-								<a href="cash_01.html">출판문의<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="cash_01.html">자비출판</a></li>
-									<li><a href="cash_02.html">반기획출판</a></li>
-									<li><a href="cash_03.html">기획출판</a></li>
-								</ul>
-							</li>
-							
-							<li>
-								<a href="notice_01.html">고객센터<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="notice_01.html">공지사항</a></li>
-									<li><a href="notice_02.html">Q&A</a></li>
-									<li><a href="notice_03.html">FAQ</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-		</div><!-- end fdw -->
-	</header><!-- end header -->
-    
-
-       
-
+		<script src="./js/modernizr.custom.js"></script>
+    </head>
+<div id="headers"></div>
          <div class="clear"></div>
         
         <div id="main_img_bg">
@@ -265,8 +103,8 @@ $(function(){
           <div class="clear"></div>
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
-		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="./js/jquery.masonry.min.js"></script>
+		<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript">
 			$(window).load(function(){
 				var $iw_thumbs			= $('#iw_thumbs'),
@@ -1159,9 +997,9 @@ $(function(){
 				<a href="#" class="bb-nav-close">Close</a>
 			</nav>
 		</div><!-- /bb-custom-wrapper -->
-		<script src="js/bookblock.min.js"></script>
-		<script src="js/classie.js"></script>
-		<script src="js/bookshelf.js"></script>
+		<script src="./js/bookblock.min.js"></script>
+		<script src="./js/classie.js"></script>
+		<script src="./js/bookshelf.js"></script>
 
 				
 			</article>
@@ -1198,8 +1036,8 @@ $(function(){
              </section>
           
    
-            
-        <? include "inc_footer.html"; ?>
+      <div id="footers"></div>       
+
 <script>
  // swiper slide3
 var swiper = new Swiper('.swiper-container', {
@@ -1211,40 +1049,11 @@ var swiper = new Swiper('.swiper-container', {
   loop: true,
 });
 </script>
-                     <footer>
-            <div id="footer_menu">
-              <div id="fo_menu"> 
-                      <ul>
-                      <li onclick="location.href='company_01.html'"><a href="company_01.html"><img src="images/footer2.jpg"></a>독식가소개</li>
-                     <li  onclick="location.href='notice_01.html'"> <a href="notice_01.html"><img src="images/footer3.jpg"></a>고객센터</li>
-                     <li  onclick="location.href='company_02.html'"> <a href="company_02.html"><img src="images/footer4.jpg"></a>오시는 길</li>
-                      </ul>
-                </div>
-              
-             <div class="clear"></div>
-               
-                 <div id="footer_copy">
-                     <ul>
-                     <li><a href="index.html"><img src="images/footer6.jpg"></a></li>
-                         <li><p>상호 : 도서출판 독식가 &nbsp; / &nbsp;대표 : 이은미<br />        	
-주소 : 서울 강남구 삼성로 716 &nbsp; / &nbsp;사업자등록번호 : 123-45-67890<br />   
-TEL. 02-1234-5678 &nbsp; / &nbsp; FAX. 02-1234-7890<br />
-                             Copyright ⓒ 2018 doksikga Allright reserved</p></li>
-                     					 
-					 <li><p>원고 및 파일전송<br />WebHard.co.kr<br />
-						 ID: eunmi1235 / PW:000 </p></li>
-						 
-						  <li><p>고객센터<br />Tel. 02-1234-5678<br />
-						 E-mail: eunmi1235@naver.com </p></li>
-					</ul>
-					 </div>
-     </div>
-                      </footer>                     
+
+      
                       
     
-               </div>
-    </body>
-</html>
+               
             
         
         
