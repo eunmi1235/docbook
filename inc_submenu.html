@@ -1,0 +1,95 @@
+<head>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="amazonmenu.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="amazonmenu.js">
+
+/* =====================================
+ ** Amazon Side Bar Menu- by JavaScript Kit (www.javascriptkit.com)
+ ** Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+===================================== */
+
+</script>
+
+
+<script>
+
+jQuery(function(){
+    amazonmenu.init({
+        menuid: 'mysidebarmenu'
+    })
+})
+
+</script>
+	
+	<script>
+	//follow quick menu
+
+$(window).scroll(function(){
+
+
+var scrollTop = $(document).scrollTop();
+// 메뉴 상하조절 if란에 하기 //
+if (scrollTop < 830) {
+
+ scrollTop = 830;
+
+}
+
+$("#sub_menu").stop();
+
+$("#sub_menu").animate( { "top" : scrollTop });
+
+});
+
+	</script>
+</head>
+
+<nav id="mysidebarmenu" class="amazonmenu">
+    <ul>
+      <li><a href="index.html">Home</a>
+      <ul>
+      <li><a href="company_01.html">독식가 소개</a></li>
+      <li><a href="company_02.html">오시는 길</a></li>
+      </ul>
+        </li>
+	 <li><a href="">출간도서</a>
+      <ul>
+      <li><a href="magazine_01.html#magazine">MAGAZINE</a></li>
+      <li><a href="magazine_01.html#cartoon">CARTOON</a></li>
+      <li><a href="magazine_01.html#kids">KIDS</a></li>
+      <li><a href="magazine_01.html#books">BOOKS</a></li>
+      </ul>
+        </li>
+		<li><a href="">E-Book 전자책</a>
+      <ul>
+      <li><a href="e-book_02.html">E-Book 전자책이란?</a></li>
+      <li><a href="e-book_01.html">E-Book 출간도서</a></li>
+      </ul>
+        </li>		
+		<li><a href="">도서출판·유통</a>
+      <ul>
+		  <li><a href="book_infor_01.html">출판정보</a></li>
+      <li><a href="book_infor_02.html">출판비용안내</a></li>
+      <li><a href="book_infor_03.html">도서유통안내</a></li>
+      </ul>
+        </li>
+		
+	<li><a href="">출판문의</a>
+      <ul>
+		  <li><a href="cash_01.html">자비출판</a></li>
+      <li><a href="cash_02.html">반기획출판</a></li>
+      <li><a href="cash_03.html">기획출판</a></li>
+      </ul>
+        </li>
+		
+		<li><a href="">고객센터</a>
+      <ul>
+		  <li><a href="notice_01.html">공지사항</a></li>
+		  <li><a href="notice_02.html">Q&A</a></li>
+		  <li><a href="notice_03.html">FAQ</a></li>     
+      </ul>
+        </li>
+	   </ul>
+</nav>
