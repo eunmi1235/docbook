@@ -1,32 +1,93 @@
-<? include "inc_header.html"; ?>
-<? include "inc_subimg4.html"; ?>
- 
-        
-          <div id="sub_body7">
-            <div id="location">
-                <article class="here"><a href="#"><img src="sub_images/building_03.png"></a><span class="arr"> > </span><a href="company_01.html">도서출판·유통</a><span class="arr"> > </span><a href="company_02.html"><span class="arr1">출판비용안내</span></a></article>
-            </div>
+<head>
+	<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"  content="IE=edge, chrome=1">
+	<meta content="width=device-width, initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport">
+	<meta name="description" content="Book Preview with BookBlock" />
+	<meta name="keywords" content="BookBlock, book preview, look inside, css, transforms, animations, css3, 3d, perspective, fullscreen" />
+	<meta name="author" content="Codrops" />
+	<title>도서출판 독식가</title>
+	<link rel="stylesheet" type="text/css" href="./normalize.css" />
+	<link rel="stylesheet" type="text/css" href="./demo.css" />
+	<link rel="stylesheet" type="text/css" href="./bookblock.css" />
+	<link rel="stylesheet" type="text/css" href="./component.css" />
+	<link rel="stylesheet" type="text/css" href="./swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="./style2.css" />
+    <!-- submneu css -->
+    <link rel="stylesheet" type="text/css" href="amazonmenu.css">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link href="./jquery-backToTop.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css' />
+	<!-- 3d preview book -->
+	<link rel="shortcut icon" href="../favicon.ico">
+	
+	<!--[if lte IE 8]>>
+	<script type="text/javascript" src="./respond.min.js"></script>
+	<![endif]-->
+		
+	<script src="./js/jquery-1.8.3.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/jquery-1.7.2.min.js"></script>
+	
 
-        <div class="clear"></div>
-		
-		
-        <div id="sub_menu">		
-		<? include "inc_submenu.html"; ?>
-		</div>
-		
-		<div class="clear"></div>
-			  
-			  <div id="sub_box">
-          <div id="sub_contents6">
-			  <h1><span style="font-family: 'Nanum Gothic',sans-serif;">출판비용안내</span></h1>
-        <div id="subbar"></div>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+	<script type="text/javascript">   
+	$(document).ready( function() { 
+
+		$("#headers").load("inc_header.html");  // 원하는 파일 경로를 삽입하면 된다
+		$("#footers").load("inc_footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        $("#sub_menu").load("./inc_submenu.html");
+	}); 
+	</script>
 			
-            <img src="sub_images/con_img.jpg">
-            
+	<script type="text/javascript">
+	//DON'T ADD THIS TO YOUR SITE! PLEASE DOWNLOAD THE ZIP AND DON'T COPY THIS PAGE!
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7243260-2']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
+	<!-- 3d preview book -->
+	<script src="./js/modernizr.custom.js"></script>
+	<!-- scrolltop -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+</head>  
+<body>
+	<div class="wrap">
+		<header id="headers"></header>
+        <div id="sub_img4"><img src="./sub_images/subimg4.jpg" width="100%";  height="400px;" /></div>
+
+        <div id="sub_body">
+            <div id="location">
+                <article class="here"><a href="#"><img src="./sub_images/building_03.png"></a><span class="arr"> > </span><a href="./company_01.html">도서출판·유통</a><span class="arr"> > </span><a href="./company_02.html"><span class="arr1">출판비용안내</span></a></article>
             </div>
-              </div>
+            <div class="clear"></div>
+            <div id="sub_menu"></div>
+		
+		    <div class="clear"></div> 
+			  
+            <div id="sub_box">
+                <div id="sub_contents6">
+                    <h1><span style="font-family: 'Nanum Gothic',sans-serif;">출판비용안내</span></h1>
+                    <div id="subbar"></div>
+                    <img src="./sub_images/con_img.jpg">
+                </div>
+            </div>
         </div>
         
-              <div class="clear"></div>
-
-         <? include "inc_footer.html"; ?>
+        <div class="clear"></div>  
+		<footer id="footers"></footer>
+	</div>
+</body>
+</html>

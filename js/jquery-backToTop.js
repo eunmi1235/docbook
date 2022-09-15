@@ -404,15 +404,14 @@
                     self._options.container.scrollTop(0);
                 } else {
                     if (self._isWindowContainer) { // If window container is used
-                        $('html,body').stop().animate({scrollTop: 0}, self._options.scrollAnimation);
+                        $('html,body').stop().animate({scrollTop: 0}, self._options.scrollAnimation, 1000);
                     } else {
                         self._options.container.animate({
                             scrollTop: 0
-                        }, self._options.scrollAnimation);
+                        }, self._options.scrollAnimation, 1000);
                     }
                 }
             });
-
         };
 
         /**

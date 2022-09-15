@@ -1,178 +1,223 @@
-<? include "inc_header.html"; ?>
-<? include "inc_subimg5.html"; ?>
+<head>
+	<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"  content="IE=edge, chrome=1">
+	<meta content="width=device-width, initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport">
+	<meta name="description" content="Book Preview with BookBlock" />
+	<meta name="keywords" content="BookBlock, book preview, look inside, css, transforms, animations, css3, 3d, perspective, fullscreen" />
+	<meta name="author" content="Codrops" />
+	<title>도서출판 독식가</title>
+	<link rel="stylesheet" type="text/css" href="./normalize.css" />
+	<link rel="stylesheet" type="text/css" href="./demo.css" />
+	<link rel="stylesheet" type="text/css" href="./bookblock.css" />
+	<link rel="stylesheet" type="text/css" href="./component.css" />
+	<link rel="stylesheet" type="text/css" href="./swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="./style2.css" />
+    <!-- submneu css -->
+    <link rel="stylesheet" type="text/css" href="amazonmenu.css">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link href="./jquery-backToTop.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css' />
+	<!-- 3d preview book -->
+	<link rel="shortcut icon" href="../favicon.ico">
+	
+	<!--[if lte IE 8]>>
+	<script type="text/javascript" src="./respond.min.js"></script>
+	<![endif]-->
+		
+	<script src="./js/jquery-1.8.3.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/jquery-1.7.2.min.js"></script>
+	
 
-          <div id="sub_body9">
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+	<script type="text/javascript">   
+	$(document).ready( function() { 
+
+		$("#headers").load("inc_header.html");  // 원하는 파일 경로를 삽입하면 된다
+		$("#footers").load("inc_footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        $("#sub_menu").load("./inc_submenu.html");
+	}); 
+	</script>
+			
+	<script type="text/javascript">
+	//DON'T ADD THIS TO YOUR SITE! PLEASE DOWNLOAD THE ZIP AND DON'T COPY THIS PAGE!
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7243260-2']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
+	<!-- 3d preview book -->
+	<script src="./js/modernizr.custom.js"></script>
+	<!-- scrolltop -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+</head>  
+<body>
+	<div class="wrap">
+		<header id="headers"></header>
+		<div id="sub_img5"><img src="./sub_images/cash3.jpg" width="100%";  height="400px;" /></div>
+		<div id="sub_body">
             <div id="location"> 
-				<article class="here"><a href="index.html"><img src="sub_images/building_03.png"></a><span class="arr"> > </span> <span>출판문의</span><span class="arr"> > </span><a href=cash_01.html><span class="arr1">반기획출판</span></a></article>
+				<article class="here"><a href="/"><img src="./sub_images/building_03.png"></a><span class="arr"> > </span> <span>출판문의</span><span class="arr"> > </span><a href=./cash_01.html><span class="arr1">반기획출판</span></a></article>
             </div>
-          </div>
-			  <div class="clear"></div>	  
-
-		  
-	          <div id="sub_contents11">
-			  <h1><span style="font-family: 'Nanum Gothic',sans-serif;">반기획출판</span></h1>
-        <div id="subbar2"></div>
+		</div>
+		<div class="clear"></div>	  
+		<div id="sub_contents11">
+			<h1><span style="font-family: 'Nanum Gothic',sans-serif;">반기획출판</span></h1>
+			<div id="subbar2"></div>
 			
-			  <div class="clear"></div>
+			<div class="clear"></div>
 						  
-     <table id="table3">
-		<tr>
-			 <th headers="mtitle">발행부수</th>
-			  <td colspan="3">1,000부 기준</td>	  
-			   
-	         </tr>
-		  
-		  <tr>
-			  <th headers="mtitle">인쇄도수</th>
-		  <td>1도(흑백)</td>
-		  <td>별색(먹1도+칼라1도)</td>
-		  <td>4도컬러</td>
-		  
-		  </tr>
-		  
-		   <tr>
-			   <th headers="mtitle">기준 페이지</th>
-		  <td colspan="3">256페이지</td>
-		 
-		  </tr>
-		  
-		   <tr>
-			   <th headers="mtitle">출판비용</th>
-		  <td>230만원</td>
-		  <td>280만원</td>
-		  <td>330만원</td>
-		  </tr>
-			
-		<tr>
-			<th headers="mtitle">제판비용</th>
-		  <td colspan="3">없음</td>
-		  </tr>
-		  
-			
-		 <tr>
-			 <th headers="mtitle">표지</th>
-		  <td colspan="3">몽블랑지 210g, 칼라인쇄, 에폭시(고무코팅) 또는 모래알 코팅 추가 지원</td>
-		 </tr>
-		  
-			
-		<tr>
-			<th>계약기간</th>
-		  <td colspan="3">2~3년 선택가능</td>
-		 </tr>
-		 
-		<tr>
-			<th>저자인세</th>
-		  <td colspan="3">도서정가의 25%</td>
-		</tr>
-		  
-			
-		<tr>
-			<th>저자 증정 및 저자 구매</th>
-		  <td colspan="3">50부, 증정본 외 저자 구매 시 60%</td>
-		  
-		 </tr>
-		  
-			
-			  <tr>
-				  <th>전자책 제작비용</th>
-		  <td colspan="3">무료제작</td>
-		  
-		 </tr>
-			
-			  <tr>
-				  <th>전자책 인세 및 정산</th>
-		  <td colspan="3">25%(반기별 마감) 익월 25일 일괄지급</td>
-		  
-		 </tr>
-			
-				  <tr>
-					  <th>홍보</th>
-		  <td colspan="3">대형서점 입점 진열 또는 서평이벤트 진행</td>
-		  </tr>
-			
-		</table>  
+     		<table id="table3">
+				<tr>
+					<th headers="mtitle">발행부수</th>
+					<td colspan="3">1,000부 기준</td>	  
+					</tr>
+				<tr>
+					<th headers="mtitle">인쇄도수</th>
+					<td>1도(흑백)</td>
+					<td>별색(먹1도+칼라1도)</td>
+					<td>4도컬러</td>
+				</tr>
+				<tr>
+					<th headers="mtitle">기준 페이지</th>
+					<td colspan="3">256페이지</td>
+				</tr>
+				
+				<tr>
+					<th headers="mtitle">출판비용</th>
+					<td>230만원</td>
+					<td>280만원</td>
+					<td>330만원</td>
+				</tr>
+					
+				<tr>
+					<th headers="mtitle">제판비용</th>
+					<td colspan="3">없음</td>
+				</tr>
+				
+					
+				<tr>
+					<th headers="mtitle">표지</th>
+					<td colspan="3">몽블랑지 210g, 칼라인쇄, 에폭시(고무코팅) 또는 모래알 코팅 추가 지원</td>
+				</tr>
+					
+				<tr>
+					<th>계약기간</th>
+					<td colspan="3">2~3년 선택가능</td>
+				</tr>
+				
+				<tr>
+					<th>저자인세</th>
+					<td colspan="3">도서정가의 25%</td>
+				</tr>
+				
+					
+				<tr>
+					<th>저자 증정 및 저자 구매</th>
+					<td colspan="3">50부, 증정본 외 저자 구매 시 60%</td>
+				</tr>
+				
+				<tr>
+					<th>전자책 제작비용</th>
+					<td colspan="3">무료제작</td>
+				</tr>
+					
+				<tr>
+					<th>전자책 인세 및 정산</th>
+					<td colspan="3">25%(반기별 마감) 익월 25일 일괄지급</td>
+				</tr>
+					
+				<tr>
+					<th>홍보</th>
+					<td colspan="3">대형서점 입점 진열 또는 서평이벤트 진행</td>
+				</tr>
+			</table>  
 	
-				  <p style="color:gray; font-weight: 600; margin-bottom: 100px; margin-top: 20px;">· 상기 규격 외 출판은 문의하시길 바라며 본문 페이지 수 증감에 따라 견적금액이 증감합니다.</p> 
-				  
-		
-				  
-				  
-				   <h1><span style="font-family: 'Nanum Gothic',sans-serif;">출판문의</span></h1>
-        <div id="subbar2"></div>
+			<p style="color:gray; font-weight: 600; margin-bottom: 100px; margin-top: 20px;">· 상기 규격 외 출판은 문의하시길 바라며 본문 페이지 수 증감에 따라 견적금액이 증감합니다.</p> 
+			<h1><span style="font-family: 'Nanum Gothic',sans-serif;">출판문의</span></h1>
+			<div id="subbar2"></div>
+					
+			<div class="clear"></div>
+						
+			<table id="table4">
+				<tr>
+					<th>이름</th>  
+					<td colspan="4"><input name="" style="width: 300px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="text" /></td>	  
+					</tr>
+				
+				<tr>
+				<th>이메일</th>
+					<td colspan="4"><input name="" style="width: 150px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="email" /> @ <input name="" style="width: 150px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="email" />
+						<select name="useremail2" style="width: 150px; height: 30px; margin: 0 5px; border: 1px solid #e1e1e1;">
+						<option>직접입력</option>
+						<option value="nate.com">nate.com</option>
+						<option value="naver.com">naver.com</option>
+						<option value="daum.net">daum.net</option>
+						<option value="gmail.com">gmail.com</option>
+						</select></td>
+				</tr>
+				
+				<tr>
+				<th>연락처</th>
+				<td colspan="4"><input name="tel" placeholder="ex)010-0000-0000" style="width: 500px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="text" /></td>
+				</tr>
+				
+				<tr>
+				<th>도서분야</th>
+				<td colspan="4"> <select name="field" style="width: 300px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" >
+						<option>선택</option>
+						<option value="문학">문학</option>
+						<option value="인문">인문</option>
+						<option value="경제경영">경제경영</option>
+						<option value="자기계발">자기계발</option>
+						<option value="기타">기타</option>
+						</select></td>
+				</tr>
+					
+					<tr>
+				<th>책제목</th>
+						<td colspan="4"><input name="" style="width: 780px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="text" /></td>
+				</tr>
 			
-			  <div class="clear"></div>
-				  
-				  <table id="table4">
-			  <tr>
-	          <th>이름</th>  
-			  <td colspan="4"><input name="" style="width: 300px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="text" /></td>	  
-	         </tr>
-		  
-		  <tr>
-		  <th>이메일</th>
-			  <td colspan="4"><input name="" style="width: 150px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="email" /> @ <input name="" style="width: 150px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="email" />
-				  <select name="useremail2" style="width: 150px; height: 30px; margin: 0 5px; border: 1px solid #e1e1e1;">
-				  <option>직접입력</option>
-				  <option value="nate.com">nate.com</option>
-				  <option value="naver.com">naver.com</option>
-				  <option value="daum.net">daum.net</option>
-				  <option value="gmail.com">gmail.com</option>
-				 </select></td>
-		  </tr>
-		  
-		   <tr>
-		  <th>연락처</th>
-		  <td colspan="4"><input name="tel" placeholder="ex)010-0000-0000" style="width: 500px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="text" /></td>
-		  </tr>
-		  
-		   <tr>
-		  <th>도서분야</th>
-		  <td colspan="4"> <select name="field" style="width: 300px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" >
-				  <option>선택</option>
-				  <option value="문학">문학</option>
-				  <option value="인문">인문</option>
-				  <option value="경제경영">경제경영</option>
-				  <option value="자기계발">자기계발</option>
-				  <option value="기타">기타</option>
-				 </select></td>
-		  </tr>
-			
-			  <tr>
-		  <th>책제목</th>
-				  <td colspan="4"><input name="" style="width: 780px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;" type="text" /></td>
-		  </tr>
-	
-	    
-         <tr>
-		  <th>문의사항</th>
-		  <td colspan="4"><textarea name="usermessage"  placeholder="문의사항을 입력해 주세요."cols="50" rows="10" style="width: 780px; height: 100px; margin: 0 10px; border: 1px solid #999; text-align: justify;"></textarea></td>
-		  </tr>
-			
-		<tr>
-			<th>서식 다운로드</th>
-			<td colspan="4"><input type="image" style="margin: 5px 10px 0 10px;" src="images/w.png" value="워드"><input type="image" src="images/w2.png" value="한글"></td>
-			</tr>			  
-		
-					  
-		<tr>
-		  <th>기획서첨부</th>
-		  <td colspan="4"><input name="" style="width: 780px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;"  type="file" /></td>
-		  </tr>
-					  
-		<tr>
-		  <th>원고첨부</th>
-		  <td colspan="4"><input name="" style="width: 780px; height: 30px; margin: 0 10px; border: 1px solid #e1e1e1;"  type="file" /></td>
-		  </tr>
-	  </table>
-          
-				   <div id="jupsoo"><a href="#">원고 접수</a></div>
-				  
-			</div>
+				
+				<tr>
+				<th>문의사항</th>
+				<td colspan="4"><textarea name="usermessage"  placeholder="문의사항을 입력해 주세요."cols="50" rows="10" style="width: 780px; height: 100px; margin: 0 10px; border: 1px solid #999; text-align: justify;"></textarea></td>
+				</tr>
+					
+				<tr>
+					<th>서식 다운로드</th>
+					<td colspan="4"><input type="image" style="margin: 5px 10px 0 10px; border: none;" src="images/w.png" value="워드"><input type="image" style="border: none;" src="images/w2.png" value="한글"></td>
+				</tr>			  
+				
+							
+				<tr>
+				<th>기획서첨부</th>
+				<td colspan="4"><input name="" style="margin: 0 10px; border: 1px solid #e1e1e1;"  type="file" /></td>
+				</tr>
+							
+				<tr>
+				<th>원고첨부</th>
+				<td colspan="4"><input name="" style="margin: 0 10px; border: 1px solid #e1e1e1;"  type="file" /></td>
+				</tr>
+			</table>
+			<div id="jupsoo"><button type="submit">원고 접수</button></div>
+		</div>
 
-
-     <div class="clear"></div>
-         <? include "inc_footer.html"; ?>
-
-
-              
-              
+     	<div class="clear"></div>
+		<footer id="footers"></footer>
+	</div>
+</body>
+</html>

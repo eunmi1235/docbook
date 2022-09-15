@@ -1,55 +1,121 @@
-<? include "inc_header.html"; ?>
-<? include "inc_subimg1.html"; ?>
+<head>
+	<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"  content="IE=edge, chrome=1">
+	<meta content="width=device-width, initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport">
+	<meta name="description" content="Book Preview with BookBlock" />
+	<meta name="keywords" content="BookBlock, book preview, look inside, css, transforms, animations, css3, 3d, perspective, fullscreen" />
+	<meta name="author" content="Codrops" />
+	<title>도서출판 독식가</title>
+	<link rel="stylesheet" type="text/css" href="./normalize.css" />
+	<link rel="stylesheet" type="text/css" href="./demo.css" />
+	<link rel="stylesheet" type="text/css" href="./bookblock.css" />
+	<link rel="stylesheet" type="text/css" href="./component.css" />
+	<link rel="stylesheet" type="text/css" href="./swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="./style2.css" />
+    <!-- submneu css -->
+    <link rel="stylesheet" type="text/css" href="amazonmenu.css">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link href="./jquery-backToTop.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css' />
+	<!-- 3d preview book -->
+	<link rel="shortcut icon" href="../favicon.ico">
+	
+	<!--[if lte IE 8]>>
+	<script type="text/javascript" src="./respond.min.js"></script>
+	<![endif]-->
+		
+	<script src="./js/jquery-1.8.3.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/jquery-1.7.2.min.js"></script>
+	
 
-    <div id="sub_body">
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+	<script type="text/javascript">   
+	$(document).ready( function() { 
+
+		$("#headers").load("inc_header.html");  // 원하는 파일 경로를 삽입하면 된다
+		$("#footers").load("inc_footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        $("#sub_menu").load("./inc_submenu.html");
+	}); 
+	</script>
+			
+	<script type="text/javascript">
+	//DON'T ADD THIS TO YOUR SITE! PLEASE DOWNLOAD THE ZIP AND DON'T COPY THIS PAGE!
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7243260-2']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
+	<!-- 3d preview book -->
+	<script src="./js/modernizr.custom.js"></script>
+	<!-- scrolltop -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+</head>  
+<body>
+    <div class="wrap">
+        <header id="headers"></header>
+        <div id="sub_img"><img src="./sub_images/subimg.png" width="100%";  height="400px;" /></div>
+
+        <div id="sub_body">
             <div id="location">
-                <article class="here"><a href="index.html"><img src="sub_images/building_03.png"></a><span class="arr"> > </span><a href="company_01.html">출판사소개</a><span class="arr"> > </span><a href="#sub_box"><span class="arr1">독식가 소개</span></a></article>
+                <article class="here"><a href="/"><img src="./sub_images/building_03.png"></a><span class="arr"> > </span><a href="./company_01.html">출판사소개</a><span class="arr"> > </span><a href="#sub_box"><span class="arr1">독식가 소개</span></a></article>
             </div>
-		<div class="clear"></div>
-		
-		
-        <div id="sub_menu">		
-		<? include "inc_submenu.html"; ?>
-		</div>
-		
-		
+        <div class="clear"></div>
+
+        <div id="sub_menu"></div> 
+
         <div id="sub_box">
-          <div id="sub_contents">
-          <ul>
-			  <h1><span style="font-family: 'Nanum Gothic',sans-serif;">독식가 소개</span></h1>
-			  <div id="subbar"></div>
-			  
-			  <div class="clear"></div>
-			  
-			  <li class="sub_text"><p style="color: #d23131; font-size: 15px; font-weight: 600;">독식가란<span style="color: #d23131; font-size: 20px;">?</span></p><br />
+            <div id="sub_contents">
+            <ul>
+                <h1><span style="font-family: 'Nanum Gothic',sans-serif;">독식가 소개</span></h1>
+                <div id="subbar"></div>
+                
+                <div class="clear"></div>
+                
+                <li class="sub_text"><p style="color: #d23131; font-size: 15px; font-weight: 600;">독식가란<span style="color: #d23131; font-size: 20px;">?</span></p><br />
                     <p><span class="text_red">‘좋은 책을 찾아 소양을 먹고 즐기는 사람들’</span> 이라는 뜻입니다.
-기존 출판업계와 달리 차별화된 출판시스템을 바탕으로 최고가 되기보단 최선을 다해 저자와 독자가 소통하고 교감하며 공유할 수 있도록 가교역할을 하며 출판업계의 새로운 버팀목이 되도록 독식가 임직원 모두 한마음 한뜻으로 노력하고 있습니다.</p>
-<br /> <br />
+        기존 출판업계와 달리 차별화된 출판시스템을 바탕으로 최고가 되기보단 최선을 다해 저자와 독자가 소통하고 교감하며 공유할 수 있도록 가교역할을 하며 출판업계의 새로운 버팀목이 되도록 독식가 임직원 모두 한마음 한뜻으로 노력하고 있습니다.</p>
+        <br /> <br />
 
-<p>종합주부지 "우먼센스" 창간과 함께 시작된 독식가의 역사는 잡지, 만화, 신문, 미디어 등 다양한 매체사업으로 그 영역을 점점 확대하며 한국의 미디어 문화의 새로운 가치를 창조해 가고 있습니다.</p>
-<br /><br />
+        <p>종합주부지 "우먼센스" 창간과 함께 시작된 독식가의 역사는 잡지, 만화, 신문, 미디어 등 다양한 매체사업으로 그 영역을 점점 확대하며 한국의 미디어 문화의 새로운 가치를 창조해 가고 있습니다.</p>
+        <br /><br />
 
-<p>주부지 부동의 1위를 차지하고 있는 우먼센스와 남성의 트랜드를 리드하는 패션전문지 아레나 까지 다양한 분야의 계층과 라이프스타일, 관심사를 포괄하는 잡지를 통해 매달 새로운 소식과 정보, 재미로 독자들에게  다가가고 있습니다.
-국내 유명만화 작품을 발행하여 국내 만화시장 확대 및 양성화에 기여하였습니다. "치즈 인 더 스트랩", "윈터우즈", "김영자 부띠끄에 어서 오세요"등 국내 작품을 발행하여 만화시장을 견인하고 있습니다.</p>
-               <br /><br />
+        <p>주부지 부동의 1위를 차지하고 있는 우먼센스와 남성의 트랜드를 리드하는 패션전문지 아레나 까지 다양한 분야의 계층과 라이프스타일, 관심사를 포괄하는 잡지를 통해 매달 새로운 소식과 정보, 재미로 독자들에게  다가가고 있습니다.
+        국내 유명만화 작품을 발행하여 국내 만화시장 확대 및 양성화에 기여하였습니다. "치즈 인 더 스트랩", "윈터우즈", "김영자 부띠끄에 어서 오세요"등 국내 작품을 발행하여 만화시장을 견인하고 있습니다.</p>
+                <br /><br />
 
- <p class="sub_textbox">출판은 한 나라의 문화 척도이자 근대화된 정신 산업이라 할 수 있습니다. 따라서 출판 사업은 기업으로서의 역할뿐만 아니라, 시대의 문화적 가치를 창조해 가야 하는 사회적 역할도 담당해야 합니다. 독식가는 이러한 경제적, 사회적 역할을 분명히 인식하고 한국을 대표하는 잡지, 서적, 만화를 총망라하는 종합 미디어 센터로서의 기반을 구축해 가고 있습니다.</p>
-          <br /><br />
+        <p class="sub_textbox">출판은 한 나라의 문화 척도이자 근대화된 정신 산업이라 할 수 있습니다. 따라서 출판 사업은 기업으로서의 역할뿐만 아니라, 시대의 문화적 가치를 창조해 가야 하는 사회적 역할도 담당해야 합니다. 독식가는 이러한 경제적, 사회적 역할을 분명히 인식하고 한국을 대표하는 잡지, 서적, 만화를 총망라하는 종합 미디어 센터로서의 기반을 구축해 가고 있습니다.</p>
+            <br /><br />
 
-<p>미디어 환경은 하루가 다르게 급변하고 정보 산업은 이미 국경을 초월한 국제 산업으로 자리잡고 있습니다. 이에 독식가는 ‘한국적 문화 콘텐츠’를 생산하여 세계화시키는 일도 게을리하지 않을 것이며 빠르게 변화하는 미디어 환경에 대응하여 다른 매체에서는 볼 수 없는 차별화된 최고의 콘텐츠를 독자 분들께 전해드릴 수 있도록 최선을 다할 것입니다.</p>
-              <br /><br />
+        <p>미디어 환경은 하루가 다르게 급변하고 정보 산업은 이미 국경을 초월한 국제 산업으로 자리잡고 있습니다. 이에 독식가는 ‘한국적 문화 콘텐츠’를 생산하여 세계화시키는 일도 게을리하지 않을 것이며 빠르게 변화하는 미디어 환경에 대응하여 다른 매체에서는 볼 수 없는 차별화된 최고의 콘텐츠를 독자 분들께 전해드릴 수 있도록 최선을 다할 것입니다.</p>
+                <br /><br />
 
-<p>점점 각박해지는 현대사회에서 한 권의 책이, 한 구절의 글귀가 인생의 새로운 전환점이 될 수도 있음에 단 한 구절이라도 소중히 독자 여러분께 전달 할 수 있도록 하겠습니다. 독식가를 찾아주신 모든 분들께 감사드리며 행복이 가득하시길 기원하겠습니다.</p>
-<br /><br />
+        <p>점점 각박해지는 현대사회에서 한 권의 책이, 한 구절의 글귀가 인생의 새로운 전환점이 될 수도 있음에 단 한 구절이라도 소중히 독자 여러분께 전달 할 수 있도록 하겠습니다. 독식가를 찾아주신 모든 분들께 감사드리며 행복이 가득하시길 기원하겠습니다.</p>
+        <br /><br />
 
 
-               감사합니다.<br /><br /></li>
+                감사합니다.<br /><br /></li>
 
-          </ul>
-          </div>                 
+            </ul>
+            </div>                 
         </div>
-</div>
-   
-<div class="clear"></div>
-   
-         <? include "inc_footer.html"; ?>
+        </div>
+
+        <div class="clear"></div>
+
+        <footer id="footers"></footer>
+    </div>
+</body>
+</html>

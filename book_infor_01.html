@@ -1,71 +1,130 @@
-<? include "inc_header.html"; ?>
-<? include "inc_subimg4.html"; ?>
- 
-          <div id="sub_body6">
+<head>
+	<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"  content="IE=edge, chrome=1">
+	<meta content="width=device-width, initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport">
+	<meta name="description" content="Book Preview with BookBlock" />
+	<meta name="keywords" content="BookBlock, book preview, look inside, css, transforms, animations, css3, 3d, perspective, fullscreen" />
+	<meta name="author" content="Codrops" />
+	<title>도서출판 독식가</title>
+	<link rel="stylesheet" type="text/css" href="./normalize.css" />
+	<link rel="stylesheet" type="text/css" href="./demo.css" />
+	<link rel="stylesheet" type="text/css" href="./bookblock.css" />
+	<link rel="stylesheet" type="text/css" href="./component.css" />
+	<link rel="stylesheet" type="text/css" href="./swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="./style2.css" />
+    <!-- submneu css -->
+    <link rel="stylesheet" type="text/css" href="amazonmenu.css">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link href="./jquery-backToTop.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css' />
+	<!-- 3d preview book -->
+	<link rel="shortcut icon" href="../favicon.ico">
+	
+	<!--[if lte IE 8]>>
+	<script type="text/javascript" src="./respond.min.js"></script>
+	<![endif]-->
+		
+	<script src="./js/jquery-1.8.3.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/jquery-1.7.2.min.js"></script>
+	
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+	<script type="text/javascript">   
+	$(document).ready( function() { 
+
+		$("#headers").load("inc_header.html");  // 원하는 파일 경로를 삽입하면 된다
+		$("#footers").load("inc_footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        $("#sub_menu").load("./inc_submenu.html");
+	}); 
+	</script>
+			
+	<script type="text/javascript">
+	//DON'T ADD THIS TO YOUR SITE! PLEASE DOWNLOAD THE ZIP AND DON'T COPY THIS PAGE!
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7243260-2']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
+	<!-- 3d preview book -->
+	<script src="./js/modernizr.custom.js"></script>
+	<!-- scrolltop -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+</head>  
+<body>
+	<div class="wrap">
+		<header id="headers"></header>
+		<div id="sub_img4"><img src="./sub_images/subimg4.jpg" width="100%";  height="400px;" /></div>
+		<div id="sub_body">
             <div id="location">
-                <article class="here"><a href="#"><img src="sub_images/building_03.png"></a><span class="arr"> > </span><a href="company_01.html">도서출판·유통</a><span class="arr"> > </span><a href="company_02.html"><span class="arr1">출판정보</span></a></article>
+                <article class="here"><a href="#"><img src="./sub_images/building_03.png"></a><span class="arr"> > </span><a href="company_01.html">도서출판·유통</a><span class="arr"> > </span><a href="company_02.html"><span class="arr1">출판정보</span></a></article>
             </div>
+        	<div class="clear"></div>
+        	<div id="sub_menu"></div>
+			<div class="clear"></div>
+			<div id="sub_box">
+				<div id="sub_contents6">
+					<h1><span style="font-family: 'Nanum Gothic',sans-serif;">출판정보</span></h1>
+					<div id="subbar"></div>
+					<div class="clear"></div>
+						
+					<div id="infor_text">
+						<h3><span style="font-family: 'Nanum Gothic',sans-serif; font-size: 20px; font-weight: 600;">1. 자비 출판</span></h3>
+						<ul>
+						<li><p>자비출판이란 저자가 출판비용을 부담하고 진행하는 출판 방식이며 기획출판이 어려울 경우나 저자 스스로 판매 및 증정이 많을 경우에
+		유리합니다. 출간된 도서의 소유권과 저작권은 저자에게 있으며 도서유통 시 저자 인세도 45%로 수익성이 높은 편입니다. 아울러 출판 
+							진행 시 저자 의견이 많이 반영하는 편이며 출판 부수도 저자가 요청하시는 대로 소량 출판도 가능합니다. 일반적으로 시, 소설, 수필, 종교서적 등이 많이 진행하는 편입니다.</p></li>
+							<li class="pyo"><img src="./images/i.JPG"></li>
+							
+							
+							<div id="ja"><a href="./cash_01.html"><span style="color: #fff;">자비출판 문의하기</span></a></div>
+						</ul>
+					</div>
+				
+					<div class="clear"></div>
+				
+					<div id="infor_text">
+						<h3><span style="font-family: 'Nanum Gothic',sans-serif; font-size: 20px; font-weight: 600;">2. 반기획 출판</span></h3>
+						<ul>
+							<li><p>반기획출판은 저자와 출판사가 공동으로 출판비용을 부담하고 진행하는 서로 윈윈하는 방식이며 저자는 출판 비용 중 인쇄비를 부담하고
+								교정과 편집, 도서유통 비용은 출판사가 부담하는 방식이며 출판기획과 편집 과정에서 저자와 출판사 의견이 고루 반영이 되며 도서 유통 시 저자인세도 25%를 받는 매우 합리적인 출판방식입니다.</p></li>
+						
+							<li class="pyo"><img src="./images/i2.JPG"></li>
+							<div id="ja"><a href="./cash_02.html"><span style="color: #fff;">반기획출판 문의하기</span></a></div>
+						</ul>
+					</div>
+					
+					<div class="clear"></div>
 
-        <div class="clear"></div>
-		
-		
-        <div id="sub_menu">		
-		<? include "inc_submenu.html"; ?>
+				
+					<div id="infor_text2">
+						<h3><span style="font-family: 'Nanum Gothic',sans-serif; font-size: 20px; font-weight: 600;">3. 기획 출판</span></h3>
+						<ul>
+							<li><p>기획출판이란 출판사에서 전적으로 출판과 관련한 모든 것을 진행하는 방식이며 일반적으로 출판사에 투고된 원고를 검토하거나 별도
+								로 저자에게 의뢰해서 출간하는 경우도 있으며 이럴 경우 원고료를 받을 수도 있습니다. 일반적으로 출판사에 투고된 원고를 검토한 후 계약 여부를 결정하며 출판 기획에서 도서유통까지 출판사에서 전체적으로 진행하며 저자에게는 통상 10% 전후의 저작권사용료를 지급 합니다.</p></li>
+						
+							<li class="pyo"><img src="./images/i3.JPG"></li>
+					
+							<div id="ja"><a href="./cash_03.html"><span style="color: #fff;">기획출판 문의하기</span></a></div> 
+						</ul>
+					</div>
+				</div> 
+			</div>
 		</div>
-		
 		<div class="clear"></div>
-			  
-			  <div id="sub_box">
-          <div id="sub_contents6">
-			  <h1><span style="font-family: 'Nanum Gothic',sans-serif;">출판정보</span></h1>
-        <div id="subbar"></div>
-			  <div class="clear"></div>
-			  
-              <div id="infor_text">
-				  <h3><span style="font-family: 'Nanum Gothic',sans-serif; font-size: 20px; font-weight: 600;">1. 자비 출판</span></h3>
-				  <ul>
-				  <li><p>자비출판이란 저자가 출판비용을 부담하고 진행하는 출판 방식이며 기획출판이 어려울 경우나 저자 스스로 판매 및 증정이 많을 경우에
-유리합니다. 출간된 도서의 소유권과 저작권은 저자에게 있으며 도서유통 시 저자 인세도 45%로 수익성이 높은 편입니다. 아울러 출판 
-					  진행 시 저자 의견이 많이 반영하는 편이며 출판 부수도 저자가 요청하시는 대로 소량 출판도 가능합니다. 일반적으로 시, 소설, 수필, 종교서적 등이 많이 진행하는 편입니다.</p></li>
-					  <li class="pyo"><img src="images/i.JPG"></li>
-					  
-					  
-					  <div id="ja"><a href="cash_01.html"><span style="color: #fff;">자비출판 문의하기</span></a></div>
-				  </ul>
-				</div>
-			 
-			  <div class="clear"></div>
-              
-              <div id="infor_text">
-				  <h3><span style="font-family: 'Nanum Gothic',sans-serif; font-size: 20px; font-weight: 600;">2. 반기획 출판</span></h3>
-              <ul>
-				  <li><p>반기획출판은 저자와 출판사가 공동으로 출판비용을 부담하고 진행하는 서로 윈윈하는 방식이며 저자는 출판 비용 중 인쇄비를 부담하고
-					  교정과 편집, 도서유통 비용은 출판사가 부담하는 방식이며 출판기획과 편집 과정에서 저자와 출판사 의견이 고루 반영이 되며 도서 유통 시 저자인세도 25%를 받는 매우 합리적인 출판방식입니다.</p></li>
-               
-				  <li class="pyo"><img src="images/i2.JPG"></li>
-				  
-				    <div id="ja"><a href="cash_02.html"><span style="color: #fff;">반기획출판 문의하기</span></a></div>
-				  
-				  </ul>
-				  </div>
-				  
-				  <div class="clear"></div>
-
-              
-              <div id="infor_text2">
-				  <h3><span style="font-family: 'Nanum Gothic',sans-serif; font-size: 20px; font-weight: 600;">3. 기획 출판</span></h3>
-				  <ul>
-				  <li><p>기획출판이란 출판사에서 전적으로 출판과 관련한 모든 것을 진행하는 방식이며 일반적으로 출판사에 투고된 원고를 검토하거나 별도
-					  로 저자에게 의뢰해서 출간하는 경우도 있으며 이럴 경우 원고료를 받을 수도 있습니다. 일반적으로 출판사에 투고된 원고를 검토한 후 계약 여부를 결정하며 출판 기획에서 도서유통까지 출판사에서 전체적으로 진행하며 저자에게는 통상 10% 전후의 저작권사용료를 지급 합니다.</p></li>
-				
-				    <li class="pyo"><img src="images/i3.JPG"></li>
-				
-					    <div id="ja"><a href="cash_03.html"><span style="color: #fff;">기획출판 문의하기</span></a></div>
-				  </ul>
-					  </div>
-				 </div> 
-            </div>
-              </div>
-       
-<div class="clear"></div>
-         <? include "inc_footer.html"; ?>
+		<footer id="footers"></footer>
+	</div>
+</body>
+</html>

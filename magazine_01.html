@@ -1,158 +1,212 @@
-<? include "inc_header.html"; ?>
-<? include "inc_subimg2.html"; ?>
-   
+<head>
+	<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"  content="IE=edge, chrome=1">
+	<meta content="width=device-width, initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport">
+	<meta name="description" content="Book Preview with BookBlock" />
+	<meta name="keywords" content="BookBlock, book preview, look inside, css, transforms, animations, css3, 3d, perspective, fullscreen" />
+	<meta name="author" content="Codrops" />
+	<title>도서출판 독식가</title>
+	<link rel="stylesheet" type="text/css" href="./normalize.css" />
+	<link rel="stylesheet" type="text/css" href="./demo.css" />
+	<link rel="stylesheet" type="text/css" href="./bookblock.css" />
+	<link rel="stylesheet" type="text/css" href="./component.css" />
+	<link rel="stylesheet" type="text/css" href="./swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<link rel="stylesheet" type="text/css" href="./style2.css" />
+    <!-- submneu css -->
+    <link rel="stylesheet" type="text/css" href="amazonmenu.css">
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link href="./jquery-backToTop.min.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css' />
+	<!-- 3d preview book -->
+	<link rel="shortcut icon" href="../favicon.ico">
+	
+	<!--[if lte IE 8]>>
+	<script type="text/javascript" src="./respond.min.js"></script>
+	<![endif]-->
+		
+	<script src="./js/jquery-1.8.3.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/jquery-1.7.2.min.js"></script>
+	
 
-    <div id="sub_body3">
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script> 
+	<script type="text/javascript">   
+	$(document).ready( function() { 
+
+		$("#headers").load("inc_header.html");  // 원하는 파일 경로를 삽입하면 된다
+		$("#footers").load("inc_footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        $("#sub_menu").load("./inc_submenu.html");
+	}); 
+	</script>
+			
+	<script type="text/javascript">
+	//DON'T ADD THIS TO YOUR SITE! PLEASE DOWNLOAD THE ZIP AND DON'T COPY THIS PAGE!
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-7243260-2']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
+	<!-- 3d preview book -->
+	<script src="./js/modernizr.custom.js"></script>
+	<!-- scrolltop -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+</head>  
+<body>
+    <div class="wrap">
+        <header id="headers"></header>
+        <div id="sub_img2"><img src="sub_images/subimg2.jpg" width="100%";  height="400px;" /></div>
+        <div id="sub_body">
             <div id="location">
                 <article class="here"><a href="index.html"><img src="sub_images/building_03.png"></a><span class="arr"> > </span><a href="magazine_01.html">출간도서</a><span class="arr"> > </span><a href="#magazine"><span class="arr1">MAGAZINE</span></a></article>
             </div>
 
-          <div class="clear"></div>
-		
-		
-        <div id="sub_menu">		
-		<? include "inc_submenu.html"; ?>
-		</div>
-		
-		
-        <div id="sub_box">
-          <div id="sub_contents3">
-          
-          <div id="magazine">
-			  <h1><span style="font-family: 'Nanum Gothic',sans-serif;">MAGAZINE</span></h1>
-        <div id="subbar"></div>
-              <ul>
-                  <li>
-                      <p><a href="#magazine"><img src="images/b1.jpg"></a></p>
-                      <p><span class="book_tt">아레나</span><br />저자&출판사: 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#magazine"><img src="images/b5.jpg"></a></p>
-                      <p><span class="book_tt">그라치아</span><br />저자 &출판사: 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#magazine"><img src="images/b4.jpg"></a></p>
-                      <p><span class="book_tt">우먼센스</span><br />저자 &출판사: 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#magazine"><img src=images/b3.jpg></a></p>
-                      <p><span class="book_tt">리빙센스</span><br />저자 &출판사: 독식가</p>                  
-                  </li>
-                  <li style="padding-right: 0;">
-                      <p><a href="#magazine"><img src="images/b2.jpg"></a></p>
-                      <p><span class="book_tt">베이비 베스트</span><br />저자&출판사 : 독식가</p>                  
-                  </li>
+            <div class="clear"></div>
 
-              </ul> 
-            </div>
-            
-    <div class="clear"></div>
-           
-            <div id="cartoon">          
-				<h1><span style="font-family: 'Nanum Gothic',sans-serif;">CARTOON</span></h1>
-        <div id="subbar"></div>
-              <ul>
-                  <li>
-                      <p><a href="#cartoon"><img src="images/b6.jpg"></a></p>
-                      <p><span class="book_tt">치즈인더트랩</span><br />저자:김소영<br />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#cartoon"><img src="images/b7.jpg"></a></p>
-                      <p><span class="book_tt">며느라기</span><br />저자:김며늘<br />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#cartoon"><img src="images/b8.jpg"></a></p>
-                      <p><span class="book_tt">김영자 부띠끄에<Br />어서오세요</span><br />저자:김영자<br />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#cartoon"><img src="images/b9.jpg"></a></p>
-                      <p><span class="book_tt">윈터우즈</span><br />저자:지소원<br />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#cartoon"><img src="images/b10.jpg"></a></p>
-                      <p><span class="book_tt">문뽀는 살림왕</span><br />저자:윤살림<br />출판사 : 독식가</p>                  
-                  </li>
+            <div id="sub_menu"></div>
 
-              </ul> 
-            </div>
-            
-    <div class="clear"></div>
-           
-            <div id="kids">          
-				<h1><span style="font-family: 'Nanum Gothic',sans-serif;">KIDS</span></h1>
-        <div id="subbar"></div>
-              <ul>
-                  <li>
-                      <p><a href="#kids"><img src="images/b11.jpg"></a></p>
-                      <p><span class="book_tt">이가 아파서<BR />치과에가요</span><br />저자 : 김의사<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#kids"><img src="images/b12.jpg"></a></p>
-                      <p><span class="book_tt">아홉살 마음사전</span><br />저자 : 장미소<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#kids"><img src="images/b13.jpg"></a></p>
-                      <p><span class="book_tt">샬롯의 거미줄</span><br />저자 : 윤샬롯<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="kids"><img src="images/b14.jpg"></a></p>
-                      <p><span class="book_tt">사랑해사랑해사랑해</span><br />저자 : 김사랑<BR />출판사 : 독식가</p>                  
-                  </li> 
-                  <li></li>
-              </ul> 
-            </div>
-            
-    <div class="clear"></div>
-           
-            <div id="books">          
-				<h1><span style="font-family: 'Nanum Gothic',sans-serif;">BOOKS</span></h1>
-        <div id="subbar"></div>
-              <ul>
-                  <li>
-                      <p><a href="#books"><img src="images/b15.jpg"></a></p>
-                      <p><span class="book_tt">백종원의 추천하는<BR/>집밥메뉴54</span><br />저자 : 백종원<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#books"><img src="images/b16.jpg"></a></p>
-                      <p><span class="book_tt">이번 연애는 처음이라</span><br />저자 : 이민기<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#books"><img src="images/b18.jpg"></a></p>
-                      <p><span class="book_tt">긍정의 말습관</span><br />저자 : 노홍철<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#books"><img src="images/b21.jpg"></a></p>
-                      <p><span class="book_tt">혼자 잘해주고<BR />상처받지 마라</span><br />저자 : 권능숙<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#books"><img src="images/b22.jpg"></a></p>
-                      <p><span class="book_tt">후,너라서 봐준다</span><br />저자 : 강누나<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#books"><img src="images/b19.jpg"></a></p>
-                      <p><span class="book_tt">연애의행방</span><br />저자 : 마연애<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                      <p><a href="#books"><img src="images/b20.jpg"></a></p>
-                      <p><span class="book_tt">위대한 개츠비</span><br />저자 : 레오나르도<BR />출판사 : 독식가 </p>                  
-                  </li>
-                  <li>
-                      <p><a href="#books"><img src="images/b17.jpg"></a></p>
-                      <p><span class="book_tt">말의품격</span><br />저자 : 한교양<BR />출판사 : 독식가</p>                  
-                  </li>
-                  <li>
-                                 
-                  </li>
-                  <li>                
-                  </li>
-              </ul> 
-            </div>
-        
-     
+            <div id="sub_box">
+                <div id="sub_contents3">
+                    <div id="magazine">
+                        <h1><span style="font-family: 'Nanum Gothic',sans-serif;">MAGAZINE</span></h1>
+                        <div id="subbar"></div>
+                        <ul>
+                            <li>
+                                <p><a href="#magazine"><img src="images/b1.jpg"></a></p>
+                                <p><span class="book_tt">아레나</span><br />저자&출판사: 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#magazine"><img src="images/b5.jpg"></a></p>
+                                <p><span class="book_tt">그라치아</span><br />저자 &출판사: 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#magazine"><img src="images/b4.jpg"></a></p>
+                                <p><span class="book_tt">우먼센스</span><br />저자 &출판사: 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#magazine"><img src=images/b3.jpg></a></p>
+                                <p><span class="book_tt">리빙센스</span><br />저자 &출판사: 독식가</p>                  
+                            </li>
+                            <li style="padding-right: 0;">
+                                <p><a href="#magazine"><img src="images/b2.jpg"></a></p>
+                                <p><span class="book_tt">베이비 베스트</span><br />저자&출판사 : 독식가</p>                  
+                            </li>
+                        </ul> 
+                    </div>
+                
+                    <div class="clear"></div>
+                
+                    <div id="cartoon">          
+                        <h1><span style="font-family: 'Nanum Gothic',sans-serif;">CARTOON</span></h1>
+                        <div id="subbar"></div>
+                        <ul>
+                            <li>
+                                <p><a href="#cartoon"><img src="images/b6.jpg"></a></p>
+                                <p><span class="book_tt">치즈인더트랩</span><br />저자:김소영<br />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#cartoon"><img src="images/b7.jpg"></a></p>
+                                <p><span class="book_tt">며느라기</span><br />저자:김며늘<br />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#cartoon"><img src="images/b8.jpg"></a></p>
+                                <p><span class="book_tt">김영자 부띠끄에<Br />어서오세요</span><br />저자:김영자<br />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#cartoon"><img src="images/b9.jpg"></a></p>
+                                <p><span class="book_tt">윈터우즈</span><br />저자:지소원<br />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#cartoon"><img src="images/b10.jpg"></a></p>
+                                <p><span class="book_tt">문뽀는 살림왕</span><br />저자:윤살림<br />출판사 : 독식가</p>                  
+                            </li>
 
+                        </ul> 
+                    </div>
+                    
+                    <div class="clear"></div>
+            
+                    <div id="kids">          
+                        <h1><span style="font-family: 'Nanum Gothic',sans-serif;">KIDS</span></h1>
+                        <div id="subbar"></div>
+                        <ul>
+                            <li>
+                                <p><a href="#kids"><img src="images/b11.jpg"></a></p>
+                                <p><span class="book_tt">이가 아파서<BR />치과에가요</span><br />저자 : 김의사<BR />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#kids"><img src="images/b12.jpg"></a></p>
+                                <p><span class="book_tt">아홉살 마음사전</span><br />저자 : 장미소<BR />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#kids"><img src="images/b13.jpg"></a></p>
+                                <p><span class="book_tt">샬롯의 거미줄</span><br />저자 : 윤샬롯<BR />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="kids"><img src="images/b14.jpg"></a></p>
+                                <p><span class="book_tt">사랑해사랑해사랑해</span><br />저자 : 김사랑<BR />출판사 : 독식가</p>                  
+                            </li> 
+                            <li></li>
+                        </ul> 
+                    </div>
+                    
+                    <div class="clear"></div>
+                
+                    <div id="books">          
+                        <h1><span style="font-family: 'Nanum Gothic',sans-serif;">BOOKS</span></h1>
+                        <div id="subbar"></div>
+                        <ul>
+                            <li>
+                                <p><a href="#books"><img src="images/b15.jpg"></a></p>
+                                <p><span class="book_tt">백종원의 추천하는<BR/>집밥메뉴54</span><br />저자 : 백종원<BR />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#books"><img src="images/b16.jpg"></a></p>
+                                <p><span class="book_tt">이번 연애는 처음이라</span><br />저자 : 이민기<BR />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#books"><img src="images/b18.jpg"></a></p>
+                                <p><span class="book_tt">긍정의 말습관</span><br />저자 : 노홍철<BR />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#books"><img src="images/b21.jpg"></a></p>
+                                <p><span class="book_tt">혼자 잘해주고<BR />상처받지 마라</span><br />저자 : 권능숙<BR />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#books"><img src="images/b22.jpg"></a></p>
+                                <p><span class="book_tt">후,너라서 봐준다</span><br />저자 : 강누나<BR />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#books"><img src="images/b19.jpg"></a></p>
+                                <p><span class="book_tt">연애의행방</span><br />저자 : 마연애<BR />출판사 : 독식가</p>                  
+                            </li>
+                            <li>
+                                <p><a href="#books"><img src="images/b20.jpg"></a></p>
+                                <p><span class="book_tt">위대한 개츠비</span><br />저자 : 레오나르도<BR />출판사 : 독식가 </p>                  
+                            </li>
+                            <li>
+                                <p><a href="#books"><img src="images/b17.jpg"></a></p>
+                                <p><span class="book_tt">말의품격</span><br />저자 : 한교양<BR />출판사 : 독식가</p>                  
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-        
-    <div class="clear"></div>
-         <? include "inc_footer.html"; ?>
+    
+        <div class="clear"></div>
+        <footer id="footers"></footer>
+    </div>
+</body>
+</html>
