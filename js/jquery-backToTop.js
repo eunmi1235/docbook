@@ -452,7 +452,7 @@
              * Creates object
              */
             let $id = this._randomID();
-            $(this._options.container).append('<div id="' + $id + '" class="jquery-back-to-top"><i class="' + this._options.icon + '"></i></div>');
+            $(this._options.container).append('<div id="' + $id + '" class="jquery-back-to-top scrolltopBtn"><i class="' + this._options.icon + '"></i></div>');
             self._obj = $('#' + $id);
 
             /**

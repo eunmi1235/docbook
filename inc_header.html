@@ -1,72 +1,99 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-	  <meta charset="UTF-8">
-	 <meta http-equiv="X-UA-Compatible"  content="IE=edge, chrome=1">
-     <meta name="viewport" content="width=device-width" >
-    <title>도서출판 독식가</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-<!--[if lte IE 8]>>
-<script type="text/javascript" src="./respond.min.js"></script>
-<![endif]-->
-	<link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="js/jquery-1.8.3.min.js"></script>
-	<script src="js/swiper.min.js"></script>
-	<script src="js/jquery-1.7.2.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="swiper.min.css" />
-	<script src="js/functions.js"></script>
-    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<link href="jquery-backToTop.min.css" rel="stylesheet" type="text/css">
-    <style>
-body.scroll {min-height:30vh;}
-</style>	
-	</head>   
-    
-    <body>
-        <body class="scroll">
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-<script src="js/jquery-backToTop.js"></script>
+<div id="logo"><a href="index.html"><img src="images/logo.jpg"  alt="도서출판 독식가" /></a></div>
+<div id="sns">
+	<a href="https://www.facebook.com/" target="_blank"><img src="images/face.jpg"></a>
+		<a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0" target="_blank"><img src="images/blog.jpg"></a>
+		<a href="https://www.instagram.com/" target="_blank"><img src="images/instar.jpg"></a>
+</div>
+
+<div id="global">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="login.html">login</a></li>
+		<!-- <li><a href="http://silverbeauty.kr/" target="_blank">portfolio</a></li> -->
+	</ul>
+</div>
+<div class="clear"></div>
+<div id="fdw">
+	<!--nav-->
+	<nav>
+		<ul>
+			<li class="current">
+				<a href="index.html">Home<span class="arrow"></span></a>
+				<ul style="display: none;" class="sub_menu">
+					<li class="arrow_top"></li>
+					<li><a href="company_01.html">독식가 소개</a></li>
+					<li><a href="company_02.html">오시는 길</a></li>
+				</ul>
+			</li>
+
+			<li><a href="magazine_01.html">출간도서</a></li>
+			
+			<li>
+				<a href="e-book_01.html">e-book 전자책<span class="arrow"></span></a>
+				<ul style="display: none;" class="sub_menu">
+					<li class="arrow_top"></li>
+					<li><a href="e-book_02.html">e-book이란?</a></li>
+					<li><a href="e-book_01.html">e-book 출간도서</a></li>
+					
+				</ul>
+			</li>
+				
+			<li>
+				<a href="book_infor_01.html">도서출판·유통<span class="arrow"></span></a>
+				<ul style="display: none;" class="sub_menu">
+					<li class="arrow_top"></li>
+					<li><a href="book_infor_01.html">출판정보</a></li>
+					<li><a href="book_infor_02.html">출판비용안내</a></li>
+					<li><a href="book_infor_03.html">도서유통안내</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="cash_01.html">출판문의<span class="arrow"></span></a>
+				<ul style="display: none;" class="sub_menu">
+					<li class="arrow_top"></li>
+					<li><a href="cash_01.html">자비출판</a></li>
+					<li><a href="cash_02.html">반기획출판</a></li>
+					<li><a href="cash_03.html">기획출판</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="notice_01.html">고객센터<span class="arrow"></span></a>
+				<ul style="display: none;" class="sub_menu">
+					<li class="arrow_top"></li>
+					<li><a href="notice_01.html">공지사항</a></li>
+					<li><a href="notice_02.html">Q&A</a></li>
+					<li><a href="notice_03.html">FAQ</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div><!-- end fdw -->
+
+<!-- jQuery lib from google server ===================== -->
+<script src="js/jquery-1.7.2.min.js"></script>
+
+<!-- scrolltop -->
+<script src="./js/jquery-backToTop.js"></script>
 <script>
 var $button = $.backToTop({theme: 'fawesome'});
 </script>
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-36251023-1']);
+_gaq.push(['_setDomainName', 'jqueryscript.net']);
+_gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
 
 </script>
-</body>
-    <div id="wrap">  
-     <header>
-        <div id="logo"><a href="index.html"><img src="images/logo.jpg"  alt="도서출판 독식가" /></a></div>
-        <div id="sns">
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/face.jpg"></a>
-             <a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0" target="_blank"><img src="images/blog.jpg"></a>
-              <a href="https://www.instagram.com/" target="_blank"><img src="images/instar.jpg"></a>
-        </div>
-        
-        <div id="global">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="login.html">login</a></li>
-			    <li><a href="http://silverbeauty.kr/" target="_blank">portfolio</a></li>
-			</ul>
-				</div>
-		 
-		 
-        <div class="clear"></div>
-   
-		  <!-- jQuery lib from google server ===================== -->
-	<script src="js/jquery-1.7.2.min.js"></script>
+
 <!--  javaScript -->
 <script>  
 <!--  // building select nav for mobile width only -->
@@ -102,11 +129,11 @@ $(function(){
 	$('nav ul li').hover(
 		function () {
 			//show its submenu
-			$('ul', this).slideDown(150);
+			$('ul', this).stop().slideDown(150); 
 		}, 
 		function () {
 			//hide its submenu
-			$('ul', this).slideUp(150);			
+			$('ul', this).stop().slideUp(150);			
 		}
 	);
 });
@@ -114,67 +141,302 @@ $(function(){
 </script>
 <!-- end -->
 
-		 <div id="fdw">
-				<!--nav-->
-					<nav>
-						<ul>
-							<li class="current">
-								<a href="index.html">Home<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="company_01.html">독식가 소개</a></li>
-									<li><a href="company_02.html">오시는 길</a></li>
-								</ul>
-							</li>
-
-							<li><a href="magazine_01.html">출간도서</a></li>
+<script type="text/javascript">
+	$(window).load(function(){
+		var $iw_thumbs			= $('#iw_thumbs'),
+			$iw_ribbon			= $('#iw_ribbon'),
+			$iw_ribbon_close	= $iw_ribbon.children('span.iw_close'),
+			$iw_ribbon_zoom		= $iw_ribbon.children('span.iw_zoom');
+			
+			ImageWall	= (function() {
+					// window width and height
+				var w_dim,
+					// index of current image
+					current				= -1,
+					isRibbonShown		= false,
+					isFullMode			= false,
+					// ribbon / images animation settings
+					ribbonAnim			= {speed : 500, easing : 'easeOutExpo'},
+					imgAnim				= {speed : 400, easing : 'jswing'},
+					// init function : call masonry, calculate window dimentions, initialize some events
+					init				= function() {
+						$iw_thumbs.imagesLoaded(function(){
+							$iw_thumbs.masonry({
+								isAnimated	: true
+							});
+						});
+						getWindowsDim();
+						initEventsHandler();
+					},
+					// calculate window dimentions
+					getWindowsDim		= function() {
+						w_dim = {
+							width	: $(window).width(),
+							height	: $(window).height()
+						};
+					},
+					// initialize some events
+					initEventsHandler	= function() {
+						
+						// click on a image
+						$iw_thumbs.delegate('li', 'click', function() {
+							if($iw_ribbon.is(':animated')) return false;
 							
-							<li>
-								<a href="e-book_01.html">e-book 전자책<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="e-book_02.html">e-book이란?</a></li>
-									<li><a href="e-book_01.html">e-book 출간도서</a></li>
-									
-								</ul>
-							</li>
+							var $el = $(this);
+							
+							if($el.data('ribbon')) {
+								showFullImage($el);
+							}
+							else if(!isRibbonShown) {
+								isRibbonShown = true;
 								
-							<li>
-								<a href="book_infor_01.html">도서출판·유통<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="book_infor_01.html">출판정보</a></li>
-									<li><a href="book_infor_02.html">출판비용안내</a></li>
-									<li><a href="book_infor_03.html">도서유통안내</a></li>
-								</ul>
-							</li>
+								$el.data('ribbon',true);
+								
+								// set the current
+								current = $el.index();
 							
-							<li>
-								<a href="cash_01.html">출판문의<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="cash_01.html">자비출판</a></li>
-									<li><a href="cash_02.html">반기획출판</a></li>
-									<li><a href="cash_03.html">기획출판</a></li>
-								</ul>
-							</li>
+								showRibbon($el);
+							}
+						});
+						
+						// click ribbon close
+						$iw_ribbon_close.bind('click', closeRibbon);
+						
+						// on window resize we need to recalculate the window dimentions
+						$(window).bind('resize', function() {
+									getWindowsDim();
+									if($iw_ribbon.is(':animated'))
+										return false;
+									closeRibbon();
+								})
+								.bind('scroll', function() {
+									if($iw_ribbon.is(':animated'))
+										return false;
+									closeRibbon();
+								});
+						
+					},
+					showRibbon			= function($el) {
+						var	$img	= $el.children('img'),
+							$descrp	= $img.next();
+						
+						// fadeOut all the other images
+						$iw_thumbs.children('li').not($el).animate({opacity : 0.2}, imgAnim.speed);
+						
+						// increase the image z-index, and set the height to 100px (default height)
+						$img.css('z-index', 100)
+							.data('originalHeight',$img.height())
+							.stop()
+							.animate({
+								height 		: '100px'
+							}, imgAnim.speed, imgAnim.easing);
+						
+						// the ribbon will animate from the left or right
+						// depending on the position of the image
+						var ribbonCssParam 		= {
+								top	: $el.offset().top - $(window).scrollTop() - 6 + 'px'
+							},
+							descriptionCssParam,
+							dir;
+						
+						if( $el.offset().left < (w_dim.width / 2) ) {
+							dir = 'left';
+							ribbonCssParam.left 	= 0;
+							ribbonCssParam.right 	= 'auto';
+						}
+						else {
+							dir = 'right';
+							ribbonCssParam.right 	= 0;
+							ribbonCssParam.left 	= 'auto';
+						}
+						
+						$iw_ribbon.css(ribbonCssParam)
+								.show()
+								.stop()
+								.animate({width : '100%'}, ribbonAnim.speed, ribbonAnim.easing, function() {
+										switch(dir) {
+											case 'left' :
+												descriptionCssParam		= {
+													'left' 			: $img.outerWidth(true) + 'px',
+													'text-align' 	: 'left'
+												};
+												break;
+											case 'right' :	
+												descriptionCssParam		= {
+													'left' 			: '-200px',
+													'text-align' 	: 'right'
+												};
+												break;
+										};
+										$descrp.css(descriptionCssParam).fadeIn();
+										// show close button and zoom
+										$iw_ribbon_close.show();
+										$iw_ribbon_zoom.show();
+								});
+						
+					},
+					// close the ribbon
+					// when in full mode slides in the middle of the page
+					// when not slides left
+					closeRibbon			= function() {
+						isRibbonShown 	= false
+						
+						$iw_ribbon_close.hide();
+						$iw_ribbon_zoom.hide();
+						
+						if(!isFullMode) {
+						
+							// current wall image
+							var $el	 		= $iw_thumbs.children('li').eq(current);
 							
-							<li>
-								<a href="notice_01.html">고객센터<span class="arrow"></span></a>
-								<ul style="display: none;" class="sub_menu">
-									<li class="arrow_top"></li>
-									<li><a href="notice_01.html">공지사항</a></li>
-									<li><a href="notice_02.html">Q&A</a></li>
-									<li><a href="notice_03.html">FAQ</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-		</div><!-- end fdw -->
-	</header><!-- end header -->
-    
+							resetWall($el);
+							
+							// slide out ribbon
+							$iw_ribbon.stop()
+									.animate({width : '0%'}, ribbonAnim.speed, ribbonAnim.easing); 
+								
+						}
+						else {
+							$iw_ribbon.stop().animate({
+								opacity		: 0.8,
+								height 		: '0px',
+								marginTop	: w_dim.height/2 + 'px' // half of window height
+							}, ribbonAnim.speed, function() {
+								$iw_ribbon.css({
+									'width'		: '0%',
+									'height'	: '126px',
+									'margin-top': '0px'
+								}).children('img').remove();
+							});
+							
+							isFullMode	= false;
+						}
+					},
+					resetWall			= function($el) {
+						var $img		= $el.children('img'),
+							$descrp		= $img.next();
+							
+						$el.data('ribbon',false);
+						
+						// reset the image z-index and height
+						$img.css('z-index',1).stop().animate({
+							height 		: $img.data('originalHeight')
+						}, imgAnim.speed,imgAnim.easing);
+						
+						// fadeOut the description
+						$descrp.fadeOut();
 
-       
-</div>
-</body>
-</html>
+						// fadeIn all the other images
+						$iw_thumbs.children('li').not($el).animate({opacity : 1}, imgAnim.speed);								
+					},
+					showFullImage		= function($el) {
+						isFullMode	= true;
+						
+						$iw_ribbon_close.hide();
+						
+						var	$img	= $el.children('img'),
+							large	= $img.data('img'),
+						
+							// add a loading image on top of the image
+							$loading = $('<span class="iw_loading"></span>');
+						
+						$el.append($loading);
+						
+						// preload large image
+						$('<img/>').load(function() {
+							var $largeImage	= $(this);
+							
+							$loading.remove();
+							
+							$iw_ribbon_zoom.hide();
+							
+							resizeImage($largeImage);
+							
+							// reset the current image in the wall
+							resetWall($el);
+							
+							// animate ribbon in and out
+							$iw_ribbon.stop().animate({
+								opacity		: 1,
+								height 		: '0px',
+								marginTop	: '63px' // half of ribbons height
+							}, ribbonAnim.speed, function() {
+								// add the large image to the DOM
+								$iw_ribbon.prepend($largeImage);
+								
+								$iw_ribbon_close.show();
+								
+								$iw_ribbon.animate({
+									height 		: '100%',
+									marginTop	: '0px',
+									top			: '0px'
+								}, ribbonAnim.speed);
+							});
+						}).attr('src',large);
+							
+					},
+					resizeImage			= function($image) {
+						var widthMargin		= 100,
+							heightMargin 	= 100,
+						
+							windowH      	= w_dim.height - heightMargin,
+							windowW      	= w_dim.width - widthMargin,
+							theImage     	= new Image();
+							
+						theImage.src     	= $image.attr("src");
+						
+						var imgwidth     	= theImage.width,
+							imgheight    	= theImage.height;
+
+						if((imgwidth > windowW) || (imgheight > windowH)) {
+							if(imgwidth > imgheight) {
+								var newwidth 	= windowW,
+									ratio 		= imgwidth / windowW,
+									newheight 	= imgheight / ratio;
+									
+								theImage.height = newheight;
+								theImage.width	= newwidth;
+								
+								if(newheight > windowH) {
+									var newnewheight 	= windowH,
+										newratio 		= newheight/windowH,
+										newnewwidth 	= newwidth/newratio;
+								
+									theImage.width 		= newnewwidth;
+									theImage.height		= newnewheight;
+								}
+							}
+							else {
+								var newheight 	= windowH,
+									ratio 		= imgheight / windowH,
+									newwidth 	= imgwidth / ratio;
+								
+								theImage.height = newheight;
+								theImage.width	= newwidth;
+								
+								if(newwidth > windowW) {
+									var newnewwidth 	= windowW,
+										newratio 		= newwidth/windowW,
+										newnewheight 	= newheight/newratio;
+							
+									theImage.height 	= newnewheight;
+									theImage.width		= newnewwidth;
+								}
+							}
+						}
+							
+						$image.css({
+							'width'			: theImage.width + 'px',
+							'height'		: theImage.height + 'px',
+							'margin-left'	: -theImage.width / 2 + 'px',
+							'margin-top'	: -theImage.height / 2 + 'px'
+						});							
+					};
+					
+				return {init : init};	
+			})();
+		
+		ImageWall.init();
+	});
+</script>
+

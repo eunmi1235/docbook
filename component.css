@@ -8,8 +8,8 @@ body,
 }
 
 body {
-    overflow: scroll;
-    overflow-x: hidden;
+    /* overflow: scroll;
+    overflow-x: hidden; */
 }
 
 .container.hide-overflow { overflow: hidden }
@@ -22,7 +22,7 @@ body {
 
 .bookshelf {
     position: relative;
-    margin: 40px auto 0;
+    /* margin: 40px auto 0; */
     list-style: none;
     text-align: center;
 }

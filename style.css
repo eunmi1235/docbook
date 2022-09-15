@@ -3,14 +3,14 @@
 @import url('https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css');
 
         * {margin: 0; padding: 0; font-family: 'Nanumgothic','나눔고딕',sans-serif; list-style:none; text-decoration: none;}
-        body {margin: 0; font-size: 15px; line-height: 150%; color: #333;}
+        body {margin: 0; font-size: 15px; line-height: 150%; color: #333; width:100%; height: 100%;} 
         img {border:none;}
         a {color: #333;}
         a:hover, a:active {color: #005aad;}
         .clear {clear: both}
         @media (min-width:320px){
-        #wrap {width: 100%; margin: 0 auto; margin-top: 30px;}
-        header {width: 1000px; margin: 0 auto;}
+        #wrap {width: 100%; margin: 0 auto; margin-top: 30px; height: 100%;}
+        header {width: 1000px; margin: 0 auto; padding-top: 20px;} 
 #global {float: right; font-size: 13px; font-family: 'Yanone+Kaffeesatz',sans-serif;}
         #global ul li {float: left; padding: 7px;} 
         #sns {float: left; margin: 0;}
@@ -19,6 +19,11 @@
         nav#menu ul li {float: left; padding-left: 12px; padding-right: 12px; background-color: #fff; margin-top: 15px;
 margin-bottom: 25px;}
         nav#menu ul li:nth-child(odd) {margin-top: 27px;} 
+		.jquery-back-to-top.scrolltopBtn {
+			display: flex;
+			align-items: center;
+			justify-content: center; 
+		} 
 
 		/* 포트폴리오 */
 			#sub_contents14 {width: 1000px; float: left; margin: 0 auto; margin-top: 50px;}
@@ -36,19 +41,43 @@ margin-bottom: 25px;}
 
         #sliding1 {display:none; float:left; width: 1000px; height: 20px; margin: 0 auto; margin-top: -30px; text-align: center;}
        
-        section {width: 1000px; margin: 0 auto;}
+        /* section {width: 1000px; margin: 0 auto;} */
+		.contents {
+			width: 1000px;
+			margin: 0 auto;
+			overflow: hidden; 
+		}
+		#scroll-wrap {
+			height: auto; 
+		}
+		.bookshelf {
+			margin: 0;
+		}
+		
+		.bookshelf figure {
+			/* height: 450px; */
+			padding-bottom: 0;
+		}
+		.perspective {
+			height: auto;
+			margin-bottom: 30px;
+		}
+		.bookshelf figcaption {
+			top: 0;
+		}
+
         
 		#b1 ul li {float: left; text-align: center; padding: 10px 20px;}
         #b2 ul li {float: left; text-align: center; padding: 10px 20px; margin: 0 auto;}
         #b3 ul li {float: left; text-align: center; padding: 10px 20px;}
         
-		#bookme2  {margin: 0 auto; margin-top: -50px; margin-bottom: 50px;}
+		#bookme2  {margin: 0 auto; margin-bottom: 50px;}
 		
 		
         h3.more {float: right; font-family:"dotum"; font-size: 13px; color: #333; padding-top: 15px; margin-left: -20px;}
         h3.more >span.plus {float: right; font-weight: 900; padding-left: 3px; font-size: 13px; color:#cb1111; }
         a:hover, a:active {color: #f76126;}
-		#al {margin-left: 50px; width: 1000px;}
+		#al {margin-left: 50px; width: 1000px; padding-top: 50px; overflow: hidden;}
 	    #al>ul{float: left;}	
 		#notice {width: 400px; margin-right: 100px;}
         #notice>ul>li {height: 30px; margin-top: 10px;}
