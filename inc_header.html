@@ -1,8 +1,17 @@
-<div id="logo"><a href="index.html"><img src="images/logo.jpg"  alt="도서출판 독식가" /></a></div>
+
+<div class="mgnbbox">
+	<div id="logo"><a href="index.html"><img src="images/logo.jpg"  alt="도서출판 독식가" /></a></div>
+	<div class="m-ver m-gnb">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div> 
+</div>
+
 <div id="sns">
 	<a href="https://www.facebook.com/" target="_blank"><img src="images/face.jpg"></a>
-		<a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0" target="_blank"><img src="images/blog.jpg"></a>
-		<a href="https://www.instagram.com/" target="_blank"><img src="images/instar.jpg"></a>
+	<a href="https://section.blog.naver.com/BlogHome.nhn?directoryNo=0&currentPage=1&groupId=0" target="_blank"><img src="images/blog.jpg"></a>
+	<a href="https://www.instagram.com/" target="_blank"><img src="images/instar.jpg"></a>
 </div>
 
 <div id="global">
@@ -15,10 +24,10 @@
 <div class="clear"></div>
 <div id="fdw">
 	<!--nav-->
-	<nav>
+	<nav class="gnb">
 		<ul>
 			<li class="current">
-				<a href="index.html">Home<span class="arrow"></span></a>
+				<a href="javascript:void(0);">Home<span class="arrow"></span></a>
 				<ul style="display: none;" class="sub_menu">
 					<li class="arrow_top"></li>
 					<li><a href="company_01.html">독식가 소개</a></li>
@@ -29,7 +38,7 @@
 			<li><a href="magazine_01.html">출간도서</a></li>
 			
 			<li>
-				<a href="e-book_01.html">e-book 전자책<span class="arrow"></span></a>
+				<a href="javascript:void(0);">e-book 전자책<span class="arrow"></span></a>
 				<ul style="display: none;" class="sub_menu">
 					<li class="arrow_top"></li>
 					<li><a href="e-book_02.html">e-book이란?</a></li>
@@ -39,7 +48,7 @@
 			</li>
 				
 			<li>
-				<a href="book_infor_01.html">도서출판·유통<span class="arrow"></span></a>
+				<a href="javascript:void(0);">도서출판·유통<span class="arrow"></span></a>
 				<ul style="display: none;" class="sub_menu">
 					<li class="arrow_top"></li>
 					<li><a href="book_infor_01.html">출판정보</a></li>
@@ -49,7 +58,7 @@
 			</li>
 			
 			<li>
-				<a href="cash_01.html">출판문의<span class="arrow"></span></a>
+				<a href="javascript:void(0);">출판문의<span class="arrow"></span></a>
 				<ul style="display: none;" class="sub_menu">
 					<li class="arrow_top"></li>
 					<li><a href="cash_01.html">자비출판</a></li>
@@ -59,7 +68,7 @@
 			</li>
 			
 			<li>
-				<a href="notice_01.html">고객센터<span class="arrow"></span></a>
+				<a href="javascript:void(0);">고객센터<span class="arrow"></span></a>
 				<ul style="display: none;" class="sub_menu">
 					<li class="arrow_top"></li>
 					<li><a href="notice_01.html">공지사항</a></li>
@@ -73,6 +82,22 @@
 
 <!-- jQuery lib from google server ===================== -->
 <script src="js/jquery-1.7.2.min.js"></script>
+<script src="./js/common.js" type="text/javascript"></script>
+
+<script>
+	$(".m-gnb").click(function(){
+		$('#fdw').toggleClass("on");
+			
+		if($('#fdw').hasClass("on")){
+			console.log(7657);
+			$('#fdw').stop().slideDown();
+		} else {
+			console.log(234324);
+			$('#fdw').removeClass('on');
+			$('#fdw').stop().slideUp();
+		}
+	});
+</script>
 
 <!-- scrolltop -->
 <script src="./js/jquery-backToTop.js"></script>
