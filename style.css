@@ -174,7 +174,7 @@ display:none; /* this is just for the mobile display */
 }
 #fdw nav ul {
 display:block;
-z-index:999999999999999999999999999;
+z-index:1;
 }
 #fdw nav ul li {
 display:inline-block;
@@ -231,7 +231,7 @@ background:#fff;
 border:1px solid #ececec;
 border-top:5px solid #fa6e11;
 display:none;
-z-index:9999999999999999999999999999999;
+z-index:1;
 -moz-box-shadow: 0px 6px 7px #121012;
 -webkit-box-shadow: 0px 6px 7px #121012;
 -ms-box-shadow: 0px 6px 7px #121012;
@@ -287,7 +287,7 @@ margin-top: 10px; width: 30px;}
 #jupsoo button {color: #fff; background-color: #999; padding: 10px 20px;}
 
 /* 전체 서브 메뉴 */
-#sub_menu {position: absolute; float: left; width: 180px; margin-top: 50px; z-index: 999999999999999999999999;}
+#sub_menu {position: absolute; float: left; width: 180px; margin-top: 50px;}
 
 
 
@@ -520,6 +520,11 @@ border: none;
 	}
 	#fdw {
 		height: 100%; 
+		z-index: 100;
+	}
+	#fdw .gnb {
+		overflow-y: auto;
+		z-index: 101;
 	}
 	#sns {
 		padding-left: 15px;
